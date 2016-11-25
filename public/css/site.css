@@ -1,0 +1,187 @@
+/*
+    CSS that is used throughout the whole site
+    this allows for easy use of elements that are similar or exactly the same looking
+*/
+body{
+    background-color: #222222;
+    padding: 0;
+    margin: 0;
+    font-family: verdana;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: #EB7D2F!important;
+}
+/*
+    Banner
+    header link at top of login, registration, forgot password, and change password pages
+*/
+.banner{
+    color: white;
+    margin-bottom: 1em;
+    background-color: black;
+    text-align: center;
+}
+/*
+    Content
+    form styling used for login, registration, forgot password, and change password pages
+*/
+.content-box{
+    background-color: #EEEEEE;
+}
+.content-box-header{
+    background-color: #141414;
+    color: white;
+}
+.content-box-content{
+    padding-right: 2em;
+    padding-left: 2em;
+}
+.content-box a{
+    color: black;
+}
+/*
+    Focus
+*/
+:focus{
+    outline-color: #EB7D2F;
+}
+/*
+    Buttons
+*/
+.button{
+    color:white !important;
+    background: #444444;
+}
+.button:hover,.button:focus{
+    background: #141414;
+    color: #EB7D2F;
+}
+
+/*
+    Messenger Area
+*/
+#messages-box{
+    height: 80vh;
+    overflow-y: scroll;
+}
+.message{
+    color: black;
+    width: 95%;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    word-wrap: break-word;
+    padding: 5px;
+    border: 1px solid #A9A9A9;
+}
+.message .message-timestamp{
+    color: gray;
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+}
+.message:nth-child(odd){
+    background-color: #CCCCCC;
+}
+.message:nth-child(even){
+    /*background-color: ;*/
+}
+.message a{
+    color: #0c4d78;
+}
+#form-mess{
+    color: black;
+}
+#user-mess{
+    resize: vertical;
+}
+#form-mess-button{
+
+}
+#auto-scroll-check{
+    float: left;
+}
+#feedback{
+    color: red;
+    text-align: center;
+}
+/*
+    Active Users
+*/
+#users-online{
+    background-color: black;
+    color: white;
+}
+#users-online ul{
+    list-style: none;
+}
+
+/*
+    Files page
+*/
+.files-table{
+    width: 100%;
+}
+.files-table a{
+    color: black;
+}
+.files-table thead{
+    background-color: #141414;
+    color: white;
+}
+.file-upload > *{
+    display: inline-block;
+}
+
+/*
+    Foundation Overrides
+*/
+.title-bar {
+    background: #333;
+    padding: 0.9rem; }
+
+.top-bar {
+    background: black; }
+.top-bar ul {
+    background: black; }
+.top-bar ul li {
+    background: black; }
+.top-bar ul li a {
+    color: #fff; }
+
+.title-bar{
+    background: black;
+}
+
+.menu-text {
+    color: #fff; }
+@media only screen and (max-width: 40em) {
+    .menu-text {
+        display: none !important; } }
+
+@media only screen and (min-width: 40em) {
+    .top-bar .menu:last-child {
+        border-left: 1px solid #4e4e4e; }
+
+    .top-bar .menu:first-child {
+        border-left: none; }
+
+    .top-bar .menu li:not(:last-child) {
+        border-right: 1px solid #4e4e4e; } }
+.dropdown.menu .submenu {
+    border: none; }
+
+.dropdown.menu .is-dropdown-submenu-parent.is-right-arrow > a::after {
+    border-color: #fff transparent transparent; }
+
+.is-drilldown-submenu-parent > a::after {
+    border-color: transparent transparent transparent #fff; }
+
+.js-drilldown-back::before {
+    border-color: transparent #fff transparent transparent; }
+
+

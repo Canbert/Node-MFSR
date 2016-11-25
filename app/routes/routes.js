@@ -9,6 +9,12 @@ module.exports = function (app) {
         });
     });
 
+    app.get('/login', function (req, res) {
+        // user required for the navbar
+        res.render('pages/login',{
+        });
+    });
+
     // =====================================
     // LOGOUT ==============================
     // =====================================

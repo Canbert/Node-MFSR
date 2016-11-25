@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata about the webpage-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="keywords" content=""/>
+    <meta name="description" content="Messenger page for MSFR"/>
+    <meta name="author" content="Scott Thomson"/>
+
+    <!--Tab Name-->
+    <title>MFSR | Messenger</title>
+
+    <link rel="stylesheet" href="css/foundation.css">
+
+    <!-- Sitewide CSS -->
+    <link rel="stylesheet" href="css/app.css">
+
+</head>
+<body>
+
+    <header>
+        <% include ../partials/nav%>
+    </header>
+
+    <div class="row">
+        <div class="medium-8 columns">
+
+            <div class="row content-box" id="messages-box"></div>
+
+            <div class="row content-box" id="form-mess" method="POST" action="">
+                <textarea class="small-10 columns" id="user-mess" required ></textarea>
+                <input class="small-2 columns button" id="form-mess-button" name="submit" type="submit" value="Send">
+                <div id="feedback"></div>
+            </div>
+        </div>
+        <div id="users-online" class="medium-4 columns">
+            <h4 class="text-center">Users Online</h4>
+            <div id="active-users"></div>
+        </div>
+    </div>
+
+    
+</body>
+</html>

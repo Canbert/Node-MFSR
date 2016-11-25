@@ -39,7 +39,7 @@ app.use(flash()); // use connect-flash for flash messages stored in session
 
 app.set('json spaces', 2);
 // socket.io chat ===================
-// require('./app/chat.js')(io);
+require('./app/chat.js')(io);
 
 // routing ========================
 require('./app/routes/routes')(app, passport);

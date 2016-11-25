@@ -15,6 +15,12 @@ module.exports = function (app) {
         });
     });
 
+    app.get('/register', function (req, res) {
+        // user required for the navbar
+        res.render('pages/register',{
+        });
+    });
+
     // =====================================
     // LOGOUT ==============================
     // =====================================

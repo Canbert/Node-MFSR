@@ -93,22 +93,6 @@ a:hover{
 .message a{
     color: #0c4d78;
 }
-#form-mess{
-    color: black;
-}
-#user-mess{
-    resize: vertical;
-}
-#form-mess-button{
-
-}
-#auto-scroll-check{
-    float: left;
-}
-#feedback{
-    color: red;
-    text-align: center;
-}
 /*
     Active Users
 */

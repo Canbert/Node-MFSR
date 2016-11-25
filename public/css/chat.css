@@ -1,0 +1,17 @@
+@import "site.css";
+
+#message-wrapper{
+    height: calc(100vh - 56px);
+}
+
+#messages {
+    list-style-type: none;
+    /*margin: 0;*/
+    /*padding: 0;*/
+    height: calc(100% - 56px);
+    overflow-y: scroll;
+}
+
+#messages .callout{
+    margin: 0;
+}

@@ -30,12 +30,16 @@
 
             <div class="row content-box" id="messages-box"></div>
 
-            <div class="row content-box" id="form-mess" method="POST" action="">
-                <textarea class="small-10 columns" id="user-mess" required ></textarea>
-                <input class="small-2 columns button" id="form-mess-button" name="submit" type="submit" value="Send">
-                <div id="feedback"></div>
+            <div class="row content-box">
+                <div class="input-group">
+                    <textarea class="input-group-field" required style="resize: vertical"></textarea>
+                    <div class="input-group-button">
+                        <button class="button">Send</button>
+                    </div>
+                </div>
             </div>
         </div>
+
         <div id="users-online" class="medium-4 columns">
             <h4 class="text-center">Users Online</h4>
             <div id="active-users"></div>

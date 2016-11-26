@@ -12,12 +12,19 @@
         <div class="top-bar-right">
             <ul class="menu" data-responsive-menu="drilldown medium-dropdown">
                 <li class="has-submenu">
-                    <a href="/user">USER</a>
+                    <% if(typeof user !== "undefined"){ %>
+                    <a href="/user"><%- user.username %></a>
                     <ul class="submenu menu vertical" data-submenu>
+                        <% if(user.privilege >= 1){%>
                         <li><a href="/admin">Administration</a></li>
+                        <% } %>
                         <li><a href="/settings">Settings</a></li>
                         <li><a href="/logout">Logout</a></li>
                     </ul>
+                    <% } else{%>
+                    <li><a href="login">Login</a></li>
+                    <li><a href="register">Register</a></li>
+                    <% } %>
                 </li>
             </ul>
         </div>

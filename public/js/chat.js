@@ -70,7 +70,7 @@ function htmlDecode(input){
 
 function notifyMe(msg) {
 
-    var title = "MFSR";
+    var title = msg.username;
     var options = {
         body: msg.message
     }

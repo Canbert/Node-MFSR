@@ -17,6 +17,7 @@
     "morgan": "^1.1.1",
     "passport": "*",
     "passport-local": "*",
+    "serve-favicon": "^2.3.2",
     "showdown": "^1.5.0",
     "socket.io": "^1.5.1"
   }

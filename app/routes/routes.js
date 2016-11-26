@@ -21,6 +21,12 @@ module.exports = function (app) {
         });
     });
 
+    app.get('/admin', function (req, res) {
+        // user required for the navbar
+        res.render('pages/admin',{
+        });
+    });
+
     // =====================================
     // LOGOUT ==============================
     // =====================================

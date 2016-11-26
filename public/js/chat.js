@@ -21,6 +21,18 @@ $('form').submit(function(){
     $('#msg').val('');
     return false;
 });
+
+$('#msg').on('keydown', function(event){
+    if (event.which == 13) {
+        if(event.ctrlKey || event.shiftKey || event.altKey){
+            //event.stopPropagation();
+        } else {
+            $('form').submit();
+            event.preventDefault();
+        }
+    }
+});
+
 socket.on('userMsg', function(msg){
     $('#messages').append($(
         '<div class="callout">' +

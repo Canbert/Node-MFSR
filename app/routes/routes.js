@@ -108,4 +108,7 @@ module.exports = function (app, passport) {
         res.redirect('/');
     });
 
+    app.get('*', function(req, res){
+        res.status(404).render('pages/404');
+    });
 };

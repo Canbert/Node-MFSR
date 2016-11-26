@@ -5,10 +5,8 @@ module.exports = function (io) {
 
     io.on('connection', function (socket) {
         console.log('Socket.io chat: user connected');
-        io.emit('serverMsg', 'User connected');
 
         socket.on('newUser',function (data, callback) {
-            console.log("connect");
             if (users.indexOf(data) != -1){
                 callback(false);
             } else {
@@ -26,7 +24,6 @@ module.exports = function (io) {
 
         socket.on('disconnect', function (data) {
             console.log('Socket.io chat: user disconnected');
-            io.emit('serverMsg', 'User disconnected');
             if(!socket.user) return;
             users.splice(users.indexOf(socket.user),1);
             io.sockets.emit('users', users);

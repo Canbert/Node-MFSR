@@ -40,7 +40,6 @@ socket.on('serverMsg', function(msg){
 });
 
 socket.on('users', function (data){
-    console.log(data);
     var html = '';
     for (i=0; i < data.length; i++){
         html += data[i] + '<br/>';

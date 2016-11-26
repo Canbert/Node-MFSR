@@ -27,6 +27,12 @@ module.exports = function (app) {
         });
     });
 
+    app.get('/files', function (req, res) {
+        // user required for the navbar
+        res.render('pages/files',{
+        });
+    });
+
     // =====================================
     // LOGOUT ==============================
     // =====================================

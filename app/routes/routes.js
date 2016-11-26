@@ -4,9 +4,22 @@ module.exports = function (app, passport) {
     // HOME PAGE ========
     // =====================================
     app.get('/', function (req, res) {
-        // user required for the navbar
-        res.render('pages/home',{
-        });
+        if(req.isUnauthenticated()){
+            res.redirect('/login');
+        }
+        else{
+            res.redirect('/messenger');
+        }
+    });
+
+    app.get('/messenger', function (req, res) {
+        if(req.isUnauthenticated()){
+            res.redirect('/login');
+        }
+        else {
+            // user required for the navbar
+            res.render('pages/messenger', {});
+        }
     });
 
     // =====================================
@@ -58,21 +71,33 @@ module.exports = function (app, passport) {
     }));
 
     app.get('/admin', function (req, res) {
-        // user required for the navbar
-        res.render('pages/admin',{
-        });
+        if(req.isUnauthenticated()){
+            res.redirect('/login');
+        }
+        else {
+            // user required for the navbar
+            res.render('pages/admin', {});
+        }
     });
 
     app.get('/files', function (req, res) {
-        // user required for the navbar
-        res.render('pages/files',{
-        });
+        if(req.isUnauthenticated()){
+            res.redirect('/login');
+        }
+        else {
+            // user required for the navbar
+            res.render('pages/files', {});
+        }
     });
 
     app.get('/settings', function (req, res) {
-        // user required for the navbar
-        res.render('pages/settings',{
-        });
+        if(req.isUnauthenticated()){
+            res.redirect('/login');
+        }
+        else {
+            // user required for the navbar
+            res.render('pages/settings', {});
+        }
     });
 
     // =====================================

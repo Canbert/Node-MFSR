@@ -33,6 +33,12 @@ module.exports = function (app) {
         });
     });
 
+    app.get('/settings', function (req, res) {
+        // user required for the navbar
+        res.render('pages/settings',{
+        });
+    });
+
     // =====================================
     // LOGOUT ==============================
     // =====================================

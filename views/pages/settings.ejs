@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata about the webpage-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="keywords" content=""/>
+    <meta name="description" content="User settings page for MSFR"/>
+    <meta name="author" content="Scott Thomson"/>
+
+    <!--Tab Name-->
+    <title>MFSR | Settings</title>
+
+    <link rel="stylesheet" href="/css/foundation.css">
+
+    <!-- Sitewide CSS -->
+    <link rel="stylesheet" href="/css/site.css">
+
+</head>
+<body>
+
+    <% include ../partials/nav%>
+
+    <div class="row">
+        <div class="medium-6 medium-centered large-5 large-centered columns">
+            <div class="row column content-box">
+                <h4 class="text-center content-box-header">Settings</h4>
+                <div class="content-box-content text-center">
+                    <?php display_user_info(); ?>
+                    <p><a href="../password/change">Change Password</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <% include ../partials/scripts%>
+
+</body>
+</html>

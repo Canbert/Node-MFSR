@@ -41,7 +41,7 @@ module.exports = function (app, passport) {
 
     // process the login form
     app.post('/login', passport.authenticate('local-login', {
-        successRedirect : '/', // redirect to the secure profile section
+        successRedirect : '/messenger', // redirect to the secure messenger section
         failureRedirect : '/login', // redirect back to the signup page if there is an error
         failureFlash : true // allow flash messages
     }));
@@ -65,7 +65,7 @@ module.exports = function (app, passport) {
 
     // process the register form
     app.post('/register', passport.authenticate('local-signup', {
-        successRedirect : '/', // redirect to the secure profile section
+        successRedirect : '/messenger', // redirect to the secure profile section
         failureRedirect : '/register', // redirect back to the signup page if there is an error
         failureFlash : true // allow flash messages
     }));

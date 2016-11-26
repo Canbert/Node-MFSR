@@ -4,7 +4,7 @@ $('form').submit(function(){
     var date = new Date();
     var timestamp = date.toString();
 
-    socket.emit('userMsg', {username: "test"/*user.username*/, message: $('#msg').val(), timestamp: timestamp});
+    socket.emit('userMsg', {username: user.username, message: $('#msg').val(), timestamp: timestamp});
     $('#msg').val('');
     return false;
 });
@@ -25,3 +25,9 @@ socket.on('serverMsg', function(msg){
         '<span aria-hidden="true">&times;</span>' +
         '</button></div>'));
 });
+
+function htmlDecode(input){
+    var e = document.createElement('div');
+    e.innerHTML = input;
+    return e.childNodes.length === 0 ? "" : e.childNodes[0].nodeValue;
+}

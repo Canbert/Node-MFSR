@@ -1,3 +1,5 @@
+var showdown = require('showdown');
+var converter = new showdown.Converter();
 
 module.exports = function (io) {
 
@@ -18,6 +20,7 @@ module.exports = function (io) {
         });
 
         socket.on('userMsg', function (msg) {
+            msg.message = converter.makeHtml(escapeHtml(msg.message));
             console.log("Socket.io chat: " + msg.username + ' said ' + msg.message);
             io.emit('userMsg', msg);
         });
@@ -29,4 +32,13 @@ module.exports = function (io) {
             io.sockets.emit('users', users);
         });
     });
+}
+
+function escapeHtml(unsafe) {
+    return unsafe
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
 }

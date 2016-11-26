@@ -18,7 +18,9 @@ module.exports = function (app, passport) {
         }
         else {
             // user required for the navbar
-            res.render('pages/messenger', {});
+            res.render('pages/messenger', {
+                user : req.user // get the user out of session and pass to template
+            });
         }
     });
 
@@ -76,7 +78,9 @@ module.exports = function (app, passport) {
         }
         else {
             // user required for the navbar
-            res.render('pages/admin', {});
+            res.render('pages/admin', {
+                user : req.user // get the user out of session and pass to template
+            });
         }
     });
 
@@ -86,7 +90,9 @@ module.exports = function (app, passport) {
         }
         else {
             // user required for the navbar
-            res.render('pages/files', {});
+            res.render('pages/files', {
+                user : req.user // get the user out of session and pass to template
+            });
         }
     });
 
@@ -96,7 +102,9 @@ module.exports = function (app, passport) {
         }
         else {
             // user required for the navbar
-            res.render('pages/settings', {});
+            res.render('pages/settings', {
+                user : req.user // get the user out of session and pass to template
+            });
         }
     });
 

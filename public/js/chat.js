@@ -3,7 +3,7 @@ var socket = io();
 var $users = $("#active-users");
 
 $(document).ready(function () {
-   socket.emit('userConnect', user.username, function(data){
+   socket.emit('newUser', user.username, function(data){
        if(data){
            console.log("yep");
        }else{
@@ -39,7 +39,8 @@ socket.on('serverMsg', function(msg){
         '</button></div>'));
 });
 
-socket.on('userConnect', function (data){
+socket.on('users', function (data){
+    console.log(data);
     var html = '';
     for (i=0; i < data.length; i++){
         html += data[i] + '<br/>';

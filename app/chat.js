@@ -7,14 +7,15 @@ module.exports = function (io) {
         console.log('Socket.io chat: user connected');
         io.emit('serverMsg', 'User connected');
 
-        socket.on('userConnect',function (data, fn) {
+        socket.on('newUser',function (data, callback) {
+            console.log("connect");
             if (users.indexOf(data) != -1){
-                fn(false);
+                callback(false);
             } else {
-                fn(true);
+                callback(true);
                 socket.user = data;
                 users.push(socket.user);
-                io.sockets.emit('userConnect', users);
+                io.sockets.emit('users', users);
             }
         });
 
@@ -23,9 +24,12 @@ module.exports = function (io) {
             io.emit('userMsg', msg);
         });
 
-        socket.on('disconnect', function () {
+        socket.on('disconnect', function (data) {
             console.log('Socket.io chat: user disconnected');
             io.emit('serverMsg', 'User disconnected');
+            if(!socket.user) return;
+            users.splice(users.indexOf(socket.user),1);
+            io.sockets.emit('users', users);
         });
     });
 }

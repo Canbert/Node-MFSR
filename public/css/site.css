@@ -61,48 +61,7 @@ a:hover{
     color: #EB7D2F;
 }
 
-/*
-    Messenger Area
-*/
-#messages-box{
-    height: 80vh;
-    overflow-y: scroll;
-}
-.message{
-    color: black;
-    width: 95%;
-    margin: auto;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    word-wrap: break-word;
-    padding: 5px;
-    border: 1px solid #A9A9A9;
-}
-.message .message-timestamp{
-    color: gray;
-    padding: 0;
-    margin: 0;
-    font-size: 12px;
-}
-.message:nth-child(odd){
-    background-color: #CCCCCC;
-}
-.message:nth-child(even){
-    /*background-color: ;*/
-}
-.message a{
-    color: #0c4d78;
-}
-/*
-    Active Users
-*/
-#users-online{
-    background-color: black;
-    color: white;
-}
-#users-online ul{
-    list-style: none;
-}
+
 
 /*
     Files page
@@ -121,9 +80,9 @@ a:hover{
     display: inline-block;
 }
 
-/*
-    Foundation Overrides
-*/
+/* ========================
+==== FOUNDATION OVERRIDES ====
+===========================*/
 .title-bar {
     background: #333;  }
 

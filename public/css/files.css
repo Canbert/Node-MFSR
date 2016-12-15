@@ -1,0 +1,17 @@
+@import "site.css";
+/* ========================
+    FILES PAGE
+===========================*/
+.files-table{
+    width: 100%;
+}
+.files-table a{
+    color: black;
+}
+.files-table thead{
+    background-color: #141414;
+    color: white;
+}
+.file-upload > *{
+    display: inline-block;
+}

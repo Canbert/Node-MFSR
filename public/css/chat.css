@@ -16,6 +16,10 @@
     margin: 0;
 }
 
-#msg-send-input-group{
+#message-form .input-group{
     margin-bottom: 0;
+}
+
+#message-form textarea{
+    resize: none;
 }

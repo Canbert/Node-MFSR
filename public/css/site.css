@@ -1,13 +1,16 @@
-/*
-    CSS that is used throughout the whole site
-    this allows for easy use of elements that are similar or exactly the same looking
-*/
+/* ========================
+    SITE WIDE STYLING
+===========================*/
 body{
     background-color: #222222;
     padding: 0;
     margin: 0;
-    font-family: verdana;
+    font-family: verdana, Helvetica;
 }
+
+/* ========================
+    LINKS
+===========================*/
 a{
     text-decoration: none;
     color: white;
@@ -15,20 +18,37 @@ a{
 a:hover{
     color: #EB7D2F!important;
 }
-/*
-    Banner
+/* ========================
+    FOCUS
+===========================*/
+:focus{
+    outline-color: #EB7D2F;
+}
+/* ========================
+    BUTTONS
+===========================*/
+.button{
+    color:white !important;
+    background: #444444;
+}
+.button:hover,.button:focus{
+    background: #141414;
+    color: #EB7D2F;
+}
+/* ========================
+    BANNER
     header link at top of login, registration, forgot password, and change password pages
-*/
+===========================*/
 .banner{
     color: white;
     margin-bottom: 1em;
     background-color: black;
     text-align: center;
 }
-/*
-    Content
+/* ========================
+    CONTENT BOX
     form styling used for login, registration, forgot password, and change password pages
-*/
+===========================*/
 .content-box{
     background-color: #EEEEEE;
 }
@@ -43,25 +63,6 @@ a:hover{
 .content-box a{
     color: black;
 }
-/*
-    Focus
-*/
-:focus{
-    outline-color: #EB7D2F;
-}
-/*
-    Buttons
-*/
-.button{
-    color:white !important;
-    background: #444444;
-}
-.button:hover,.button:focus{
-    background: #141414;
-    color: #EB7D2F;
-}
-
-
 
 /*
     Files page
@@ -81,7 +82,7 @@ a:hover{
 }
 
 /* ========================
-==== FOUNDATION OVERRIDES ====
+    FOUNDATION OVERRIDES
 ===========================*/
 .title-bar {
     background: #333;  }

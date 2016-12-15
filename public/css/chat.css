@@ -1,11 +1,11 @@
 @import "site.css";
 
 /* ========================
-==== MESSENGER PAGE ====
+    MESSENGER PAGE
 ===========================*/
 
 /* ========================
-==== MESSAGES AREA ====
+    MESSAGES AREA
 ===========================*/
 #message-wrapper{
     height: calc(100vh - 54px);
@@ -22,7 +22,7 @@
 }
 
 /* ========================
-==== MESSAGE INPUT FORM ====
+    MESSAGE INPUT FORM
 ===========================*/
 #message-form .input-group{
     margin-bottom: 0;
@@ -38,7 +38,7 @@
 }
 
 /* ========================
-==== INDIVIDUAL MESSAGE ====
+    INDIVIDUAL MESSAGE
 ===========================*/
 .message{
     color: black;
@@ -67,7 +67,7 @@
 }
 
 /* ========================
-==== USERS ONLINE ====
+    USERS ONLINE
 ===========================*/
 #users-online{
     background-color: black;

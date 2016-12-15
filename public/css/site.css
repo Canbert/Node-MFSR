@@ -125,8 +125,7 @@ a:hover{
     Foundation Overrides
 */
 .title-bar {
-    background: #333;
-    padding: 0.9rem; }
+    background: #333;  }
 
 .top-bar {
     background: black; }

@@ -1,17 +1,21 @@
 @import "site.css";
 
 #message-wrapper{
-    height: calc(100vh - 56px);
+    height: calc(100vh - 54px);
 }
 
 #messages {
     list-style-type: none;
     /*margin: 0;*/
     /*padding: 0;*/
-    height: calc(100% - 56px);
+    height: calc(100% - 50px);
     overflow-y: scroll;
 }
 
 #messages .callout{
     margin: 0;
+}
+
+#msg-send-input-group{
+    margin-bottom: 0;
 }

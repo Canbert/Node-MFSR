@@ -34,7 +34,7 @@ app.use(methodOverride());
 app.use(favicon(__dirname + '/public/images/favicon.ico'));
 
 // required for passport
-app.use(session({ secret: 'didsomebodysaythatineedtoputsomethinghere' })); // session secret
+app.use(session({ secret: 'didsomebodysaythatineedtoputsomethinghere', saveUninitialized: true, resave: true})); // session secret
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session

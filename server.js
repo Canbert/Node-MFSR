@@ -17,7 +17,7 @@ var favicon = require('serve-favicon');
 // configuration =================
 
 var database = require('./config/database');
-mongoose.connect(database.url);
+mongoose.connect(database.url, { useNewUrlParser: true });
 //
 require('./config/passport')(passport); // pass passport for configuration
 

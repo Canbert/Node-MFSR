@@ -1,17 +1,78 @@
 @import "site.css";
 
+/* ========================
+    MESSENGER PAGE
+===========================*/
+
+/* ========================
+    MESSAGES AREA
+===========================*/
 #message-wrapper{
-    height: calc(100vh - 56px);
+    height: calc(100vh - 54px);
 }
 
 #messages {
     list-style-type: none;
-    /*margin: 0;*/
-    /*padding: 0;*/
-    height: calc(100% - 56px);
+    height: calc(100% - 50px);
     overflow-y: scroll;
 }
 
 #messages .callout{
     margin: 0;
+}
+
+/* ========================
+    MESSAGE INPUT FORM
+===========================*/
+#message-form .input-group{
+    margin-bottom: 0;
+}
+
+#message-form textarea{
+    resize: none;
+}
+
+#messages-box{
+    height: 80vh;
+    overflow-y: scroll;
+}
+
+/* ========================
+    INDIVIDUAL MESSAGE
+===========================*/
+.message{
+    color: black;
+    width: 95%;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    word-wrap: break-word;
+    padding: 5px;
+    border: 1px solid #A9A9A9;
+}
+.message .message-timestamp{
+    color: gray;
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+}
+.message:nth-child(odd){
+    background-color: #CCCCCC;
+}
+.message:nth-child(even){
+    /*background-color: ;*/
+}
+.message a{
+    color: #0c4d78;
+}
+
+/* ========================
+    USERS ONLINE
+===========================*/
+#users-online{
+    background-color: black;
+    color: white;
+}
+#users-online ul{
+    list-style: none;
 }
